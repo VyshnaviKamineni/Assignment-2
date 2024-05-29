@@ -1,41 +1,134 @@
-.App {
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
+.App {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
 h1 {
+  font-size: 2em;
   color: #333;
-  font-size: 50px;
-  margin-bottom: 20px;
 }
 
 h2 {
-  color: #2215b3;
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 p {
-  color: #777;
-  font-size: 22px;
-  margin: 5px 0;
+  font-size: 1.2em;
+  color: #666;
+  margin: 10px 0;
 }
 
 button {
-  padding: 12px 24px;
-  font-size: 16px;
-  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  background-color: #4CAF50;
-  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 5px;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #004494;
+  transform: translateY(0);
+}
+
+.toggle-btn {
+  background-color: #28a745;
+}
+
+.toggle-btn:hover {
+  background-color: #218838;
+}
+
+.update-btn {
+  background-color: #007bff;
+}
+
+.update-btn:hover {
+  background-color: #0056b3;
+}
+
+.reset-btn {
+  background-color: #dc3545;
+}
+
+.reset-btn:hover {
+  background-color: #c82333;
+}
+
+/* Input Styles */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 500px) {
+  .App {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  input {
+    font-size: 0.9em;
+  }
 }
